@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Mensagem Especial</title>
+    <style>
+        body {
+            background: #f0f4f8;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background: #fff;
+            padding: 24px 32px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            text-align: center;
+        }
+        button {
+            margin-top: 16px;
+            padding: 8px 20px;
+            border: none;
+            border-radius: 4px;
+            background: #7af861;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        button:hover {
+            background: #1565c0;
+        }
+        .mensagem {
+            margin-top: 18px;
+            color: #388e3c;
+            font-weight: bold;
+            font-size: 18px;
+            min-height: 24px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <p>Tenho uma mensagem especial para você:</p>
+        <button id="mostrarMensagem">Clique para ver!</button>
+        <div class="mensagem" id="mensagem"></div>
+    </div>
+    <script>
+        const botao = document.getElementById('mostrarMensagem');
+        const mensagem = document.getElementById('mensagem');
+
+        botao.addEventListener('click', () => {
+            mensagem.textContent = 'Você é capaz de conquistar grandes coisas!';
+        });
+    </script>
+</body>
+</html>
